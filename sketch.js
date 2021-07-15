@@ -32,14 +32,14 @@ feedTime = database.ref('FeedTime');
 feedTime.on("value",function(data){
   lastFed = data.val()
 })
-console.log(stock);
+
   drawSprites();
 }
 
 //function to read food Stock
 function readStock(data){
   foodS=data.val();
-
+foodObj.updateFoodStock(foodS);
 }
 
 function feedDog(){
